@@ -1,36 +1,186 @@
-/* mod-simple-teaser-wrapper */
-.mod-simple-teaser-wrapper {
-	@include prefix(box-sizing, border-box);
-	margin: 20px 0;
+/* mod-form */
+.mod-form {
 
-	a {
-		display: block;
-		text-decoration: none;
-	}
-
-	img {
+	input[type=text],
+	input[type=email],
+	input[type=number],
+	input[type=password],
+	input[type=tel],
+	input[type=url],
+	input[type=date],
+	select,
+	textarea {
+		@include prefix(border-radius, 3px);
+		@include prefix(box-sizing, border-box);
 		width: 100%;
+		padding: 8px;
+		margin: 0;
+		border : 1px solid $grey;
 	}
 
-	/* iPhone 5 (landscape)  */
-	@media only screen and (min-width: 568px) {
-
+	textarea {
+		height: 180px;
 	}
 
-	/* iPad (portrait) */
-	@media only screen and (min-width: $breakpoint2) {
-		float: left;
-		width: 50%;
-		padding: 20px;
-
-		img {
-			width: auto;
+	fieldset {
+		legend {
+			display: none;
 		}
 	}
 
-	/* Desktop */
-	@media only screen and (min-width: $breakpoint3) {
-		width: 33.3333333333%;
+	/* label */
+	label {
+		margin-bottom: .5em;
+		display: block;
+		cursor: pointer;
+
+		&:after {
+			@extend .clearfix;
+		}
+
+		input {
+			margin-top: .3em;
+			margin-right: .5em;
+			float: left;
+		}
+
+		span {
+			float: left;
+
+			@include respond-max($breakpoint2) {
+				width: 92%;
+			}
+		}
+
+		p {
+			&.error {
+				display: none !important;
+			}
+		}
 	}
 
+	/* form-list */
+	.form-list {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		li {
+			margin-bottom: 20px;
+			width: 100%;
+		}
+		.fields {
+			&:after {
+				@extend .clearfix;
+			}
+
+			@include respond-max($breakpoint2) {
+				margin-bottom: 0;
+			}
+
+			.fieldWrapper {
+				width: 49%;
+				float: left;
+				margin-left: 2%;
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				@include respond-max($breakpoint2) {
+					width: 100%;
+					float: none;
+					margin-left: 0;
+				}
+			}
+
+			.field {
+				margin: 0 0 calcPxToEm(20) 0;
+				float: left;
+				margin-left: 2%;
+				width: 49%;
+				position: relative;
+
+				@include respond-max($breakpoint2) {
+					width: 100%;
+					margin-left: 0;
+					margin-bottom: 20px;;
+				}
+
+				&:first-child {
+					margin-left: 0;
+				}
+
+				.input-box {
+					display: block;
+				}
+
+				&.size-one-quarter {
+					width: 24%;
+				}
+
+				&.size-three-quarter {
+					width: 74%;
+				}
+
+				+ .field {
+					float: right;
+				}
+
+				p {
+					display: none;
+
+					&.error {
+						@include fontSizeREM(11);
+						display: block;
+					}
+				}
+			}
+		}
+	}
+
+	/* date-select-fields */
+	.input-date-wrapper {
+		&:after {
+			@extend .clearfix;
+		}
+
+		.input-box {
+			float: left;
+			margin-left: 2%;
+			width: 32%;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		span {
+			float: left;
+			margin-left: 2%;
+			padding: 8px 0;
+		}
+	}
+
+	/* error */
+	.error,
+	.error a,
+	.error a:visited,
+	.error a:hover,
+	.error a:focus {
+		color: red;
+	}
+
+	.error {
+		input,
+		select,
+		textarea {
+			border-color: red;
+			color: red;
+		}
+	}
+
+	p.error {
+		@include fontSizeREM(11);
+		display: block;
+	}
 }
