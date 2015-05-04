@@ -170,6 +170,12 @@ $module: '.mod-form';
 			border-color: $error-color;
 			color: $error-color;
 		}
+
+		label {
+			span {
+				color: $error-color;
+			}
+		}
 	}
 
 	p {

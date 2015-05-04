@@ -42,12 +42,12 @@ Brandung.Plugins.validator = function(obj) {
 			errorClass: 'error',
 			errorElement: 'p',
 			highlight: function(element, errorClass, validClass) {
-				$(element).closest('.field').addClass(errorClass);
-				$(element).closest('.wide').addClass(errorClass);
+				$(element).closest('.mod-form__field').addClass(errorClass);
+				$(element).closest('.mod-form__list__wide').addClass(errorClass);
 			},
 			unhighlight: function(element, errorClass, validClass) {
-				$(element).closest('.field').removeClass(errorClass);
-				$(element).closest('.wide').removeClass(errorClass);
+				$(element).closest('.mod-form__field').removeClass(errorClass);
+				$(element).closest('.mod-form__list__wide').removeClass(errorClass);
 			},
 			submitHandler: function(form) {
 				form.submit();
