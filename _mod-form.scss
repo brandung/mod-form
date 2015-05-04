@@ -1,164 +1,156 @@
-/* mod-form */
-.mod-form {
+/**
+ * brandung mod-form.scss v1.0.0
+ *
+ * Copyright brandung GmbH & Co.KG
+ * http://www.brandung.de/
+ *
+ * Date: 2014-10-13
+ * MIT License (MIT)
+ */
 
-	input[type=text],
-	input[type=email],
-	input[type=number],
-	input[type=password],
-	input[type=tel],
-	input[type=url],
-	input[type=date],
-	select,
-	textarea {
-		@include prefix(border-radius, 3px);
-		@include prefix(box-sizing, border-box);
-		width: 100%;
-		padding: 8px;
-		margin: 0;
-		border : 1px solid $grey;
-	}
 
+/* ==========================================================================
+   Form Module
+   ========================================================================== */
+
+
+$module: '.mod-form';
+
+#{$module} {
 	textarea {
 		height: 180px;
 	}
 
-	fieldset {
-		legend {
-			display: none;
-		}
-	}
-
-	/* label */
 	label {
-		margin-bottom: .5em;
-		display: block;
+		color: $text-dark-color;
 		cursor: pointer;
+		display: block;
+		font-weight: bold;
 
 		&:after {
 			@extend .clearfix;
 		}
 
 		input {
-			margin-top: .3em;
-			margin-right: .5em;
 			float: left;
+			margin: .1em .5em 0 0;
 		}
 
 		span {
+			color: $text-dark-color;
 			float: left;
+			text-align: left;
 
-			@include respond-max($breakpoint-min-m) {
-				width: 92%;
+			@include respond-max($breakpoint-max-l) {
+				width: 85%;
 			}
 		}
 
+		a {
+			color: $ci-color;
+		}
+
 		p {
+			&.is-invalid,
 			&.error {
 				display: none !important;
 			}
 		}
 	}
 
-	/* form-list */
-	.form-list {
-		margin: 0;
-		padding: 0;
-		list-style: none;
+	&__list {
+		@extend .unstyled;
+
 		li {
-			margin-bottom: 20px;
+			margin: 0 0 $grid-gutter-width / 2 0;
 			width: 100%;
-		}
-		.fields {
+
 			&:after {
 				@extend .clearfix;
 			}
 
-			@include respond-max($breakpoint-min-m) {
-				margin-bottom: 0;
-			}
-
-			.fieldWrapper {
-				width: 49%;
-				float: left;
-				margin-left: 2%;
-
-				&:first-child {
-					margin-left: 0;
-				}
-
-				@include respond-max($breakpoint-min-m) {
-					width: 100%;
-					float: none;
-					margin-left: 0;
-				}
-			}
-
-			.field {
-				margin: 0 0 calcPxToEm(20) 0;
-				float: left;
-				margin-left: 2%;
-				width: 49%;
-				position: relative;
-
-				@include respond-max($breakpoint-min-m) {
-					width: 100%;
-					margin-left: 0;
-					margin-bottom: 20px;;
-				}
-
-				&:first-child {
-					margin-left: 0;
-				}
-
-				.input-box {
-					display: block;
-				}
-
-				&.size-one-quarter {
-					width: 24%;
-				}
-
-				&.size-three-quarter {
-					width: 74%;
-				}
-
-				+ .field {
-					float: right;
-				}
-
-				p {
-					display: none;
-
-					&.error {
-						@include fontSizeREM(11);
-						display: block;
-					}
-				}
+			#{$module}__field {
+				margin: 0;
 			}
 		}
 	}
 
-	/* date-select-fields */
-	.input-date-wrapper {
+	#{$module}__fields {
+		width: 100%;
+
 		&:after {
 			@extend .clearfix;
 		}
 
-		.input-box {
+		#{$module}__field {
 			float: left;
-			margin-left: 2%;
-			width: 32%;
+			margin-left: 1%;
 
 			&:first-child {
 				margin-left: 0;
 			}
 		}
 
-		span {
-			float: left;
-			margin-left: 2%;
-			padding: 8px 0;
+		#{$module}__input-box {
+			display: block;
 		}
+	}
+
+	#{$module}__field {
+		margin: 0 0 $grid-gutter-width / 2 0;
+		width: 100%;
+		position: relative;
+
+		&:first-child {
+			margin-left: 0;
+		}
+
+		#{$module}__input-box {
+			display: block;
+		}
+
+		&#{$module}__field--size-one-quarter {
+			width: 24%;
+		}
+
+		&#{$module}__field--size-three-quarter {
+			width: 75%;
+		}
+
+		+ .field {
+			float: right;
+		}
+
+		p {
+			display: none;
+
+			&.is-invalid {
+				display: block;
+			}
+		}
+	}
+
+   	/* date-select-fields */
+	#{$module}__input-date-wrapper {
+	      &:after {
+	         @extend .clearfix;
+		  }
+	
+			#{$module}__input-box {
+	         float: left;
+	         margin-left: 1%;
+	         width: 32.66%;
+	
+	         &:first-child {
+	            margin-left: 0;
+	         }
+	      }
+	
+	      span {
+	         float: left;
+	         margin-left: 2%;
+	         padding: 8px 0;
+	      }
 	}
 
 	/* error */
@@ -167,20 +159,24 @@
 	.error a:visited,
 	.error a:hover,
 	.error a:focus {
-		color: red;
+		color: $error-color;
 	}
 
-	.error {
+	.error,
+	.is-invalid {
 		input,
 		select,
 		textarea {
-			border-color: red;
-			color: red;
+			border-color: $error-color;
+			color: $error-color;
 		}
 	}
 
-	p.error {
-		@include fontSizeREM(11);
-		display: block;
+	p {
+		&.error,
+		&.is-invalid {
+			@include fontSizeREM(11);
+			display: block;
+		}
 	}
 }
