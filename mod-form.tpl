@@ -157,18 +157,24 @@
 						</div>
 					</div>
 				</li>
-				<li class="mod-form__list__wide">
-					<div class="mod-form__input-box">
-						<textarea name="message" id="message" class="required-entry" placeholder="[Message]*"></textarea>
+				<li>
+					<div class="mod-form__list__wide">
+						<div class="mod-form__input-box">
+							<textarea name="message" id="message" class="required-entry" placeholder="[Message]*"></textarea>
+						</div>
 					</div>
 				</li>
-				<li class="mod-form__list__wide error">
-					<label><input type="checkbox" name="input-checkbox" value="1" /> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</span></label>
+				<li>
+					<div class="mod-form__list__wide error">
+						<label><input type="checkbox" name="input-checkbox" value="1" /> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</span></label>
+					</div>
 				</li>
-				<li class="mod-form__list__wide">
-					<div class="mod-form__single-line">
-						<label><input type="radio" name="input-radio" class="required-entry" value="1" /> <span>Ja</span></label>
-						<label><input type="radio" name="input-radio" class="required-entry" value="2" /> <span>Nein</span></label>
+				<li>
+					<div class="mod-form__list__wide">
+						<div class="mod-form__single-line">
+							<label><input type="radio" name="input-radio" class="required-entry" value="1" /> <span>Ja</span></label>
+							<label><input type="radio" name="input-radio" class="required-entry" value="2" /> <span>Nein</span></label>
+						</div>
 					</div>
 				</li>
 			</ul>
