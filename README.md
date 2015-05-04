@@ -131,55 +131,63 @@ Needs [jquery-validation](http://jqueryvalidation.org/) and [jquery](https://git
 						</div>
 					</div>
 				</li>
-				<li class="mod-form__fields">
-					<div class="mod-form__field">
+				<li>
+					<div class="mod-form__fields">
+						<div class="mod-form__field">
 
-						<div class="mod-form__input-date-wrapper">
-							<div class="mod-form__input-box">
-								<select name="fm-day" id="fm-day">
-									<option value="">TT</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
-							</div>
-							<div class="mod-form__input-box">
-								<select name="fm-month" id="fm-month">
-									<option value="">MM</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
-							</div>
-							<div class="mod-form__input-box">
-								<select name="fm-year" id="fm-year">
-									<option value="">JJJJ</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
+							<div class="mod-form__input-date-wrapper">
+								<div class="mod-form__input-box">
+									<select name="fm-day" id="fm-day">
+										<option value="">TT</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div class="mod-form__input-box">
+									<select name="fm-month" id="fm-month">
+										<option value="">MM</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div class="mod-form__input-box">
+									<select name="fm-year" id="fm-year">
+										<option value="">JJJJ</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
 				</li>
-				<li class="mod-form__list__wide">
-					<div class="mod-form__input-box">
-						<textarea name="message" id="message" class="required-entry" placeholder="[Message]*"></textarea>
+				<li>
+					<div class="mod-form__list__wide">
+						<div class="mod-form__input-box">
+							<textarea name="message" id="message" class="required-entry" placeholder="[Message]*"></textarea>
+						</div>
 					</div>
 				</li>
-				<li class="mod-form__list__wide error">
-					<label><input type="checkbox" name="input-checkbox" value="1" /> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</span></label>
+				<li>
+					<div class="mod-form__list__wide error">
+						<label><input type="checkbox" name="input-checkbox" value="1" /> <span>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.</span></label>
+					</div>
 				</li>
-				<li class="mod-form__list__wide">
-					<div class="mod-form__single-line">
-						<label><input type="radio" name="input-radio" class="required-entry" value="1" /> <span>Ja</span></label>
-						<label><input type="radio" name="input-radio" class="required-entry" value="2" /> <span>Nein</span></label>
+				<li>
+					<div class="mod-form__list__wide">
+						<div class="mod-form__single-line">
+							<label><input type="radio" name="input-radio" class="required-entry" value="1" /> <span>Ja</span></label>
+							<label><input type="radio" name="input-radio" class="required-entry" value="2" /> <span>Nein</span></label>
+						</div>
 					</div>
 				</li>
 			</ul>

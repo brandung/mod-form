@@ -120,39 +120,41 @@
 						</div>
 					</div>
 				</li>
-				<li class="mod-form__fields">
-					<div class="mod-form__field">
+				<li>
+					<div class="mod-form__fields">
+						<div class="mod-form__field">
 
-						<div class="mod-form__input-date-wrapper">
-							<div class="mod-form__input-box">
-								<select name="fm-day" id="fm-day">
-									<option value="">TT</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
-							</div>
-							<div class="mod-form__input-box">
-								<select name="fm-month" id="fm-month">
-									<option value="">MM</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
-							</div>
-							<div class="mod-form__input-box">
-								<select name="fm-year" id="fm-year">
-									<option value="">JJJJ</option>
-									<option value="1">1</option>
-									<option value="2">2</option>
-									<option value="3">3</option>
-									<option value="4">4</option>
-									<option value="5">5</option>
-								</select>
+							<div class="mod-form__input-date-wrapper">
+								<div class="mod-form__input-box">
+									<select name="fm-day" id="fm-day">
+										<option value="">TT</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div class="mod-form__input-box">
+									<select name="fm-month" id="fm-month">
+										<option value="">MM</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
+								<div class="mod-form__input-box">
+									<select name="fm-year" id="fm-year">
+										<option value="">JJJJ</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+								</div>
 							</div>
 						</div>
 					</div>
