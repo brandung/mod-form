@@ -22,9 +22,9 @@ $module: '.mod-form';
 	}
 
 	label {
-		color: $text-dark-color;
+		color: $text-color;
 		cursor: pointer;
-		display: block;
+		display: inline-block;
 		font-weight: bold;
 
 		&:after {
@@ -37,7 +37,7 @@ $module: '.mod-form';
 		}
 
 		span {
-			color: $text-dark-color;
+			color: $text-color;
 			float: left;
 			text-align: left;
 
@@ -59,14 +59,14 @@ $module: '.mod-form';
 	}
 
 	&__list {
-		@extend .unstyled;
+		@extend %unstyled;
 
 		li {
 			margin: 0 0 $grid-gutter-width / 2 0;
 			width: 100%;
 
 			&:after {
-				@extend .clearfix;
+				@extend %clearfix;
 			}
 
 			#{$module}__field {
@@ -79,7 +79,7 @@ $module: '.mod-form';
 		width: 100%;
 
 		&:after {
-			@extend .clearfix;
+			@extend %clearfix;
 		}
 
 		#{$module}__field {
@@ -107,6 +107,10 @@ $module: '.mod-form';
 
 		#{$module}__input-box {
 			display: block;
+
+			label {
+				display: block;
+			}
 		}
 
 		&#{$module}__field--size-one-quarter {
@@ -130,27 +134,27 @@ $module: '.mod-form';
 		}
 	}
 
-   	/* date-select-fields */
+	/* date-select-fields */
 	#{$module}__input-date-wrapper {
-	      &:after {
-	         @extend .clearfix;
-		  }
-	
-			#{$module}__input-box {
-	         float: left;
-	         margin-left: 1%;
-	         width: 32.66%;
-	
-	         &:first-child {
-	            margin-left: 0;
-	         }
-	      }
-	
-	      span {
-	         float: left;
-	         margin-left: 2%;
-	         padding: 8px 0;
-	      }
+		&:after {
+			@extend %clearfix;
+		}
+
+		#{$module}__input-box {
+			float: left;
+			margin-left: 1%;
+			width: 32.66%;
+
+			&:first-child {
+				margin-left: 0;
+			}
+		}
+
+		span {
+			float: left;
+			margin-left: 2%;
+			padding: 8px 0;
+		}
 	}
 
 	/* error */
